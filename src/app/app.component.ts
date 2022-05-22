@@ -10,6 +10,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent implements OnInit{
 
+  //Removing "pressed" class from buttons
+
   removeclass() {
     document.querySelector(".europe")?.classList.remove("pressed")
     document.querySelector(".asia")?.classList.remove("pressed")
@@ -17,7 +19,7 @@ export class AppComponent implements OnInit{
     document.querySelector(".america")?.classList.remove("pressed")
     document.querySelector(".australia")?.classList.remove("pressed")
   }
-
+  // Implement removeclass() into function and adding "pressed" to one button
   restartEurope() {
     this.removeclass()
     document.querySelector(".europe")?.classList.toggle("pressed")
@@ -44,23 +46,28 @@ export class AppComponent implements OnInit{
 
   }
 
+  // Change region and area + get data from API
+
   europe() {
+    // new region and area
     let region = "europe"
     let area = "warsaw"
+    // Get data from API and change region + area
     this.http.get('http://worldtimeapi.org/api/timezone/' + region + "/" + area)
     .subscribe(Response =>{
       if(Response) {
-        
+        // Get datetime data from API
       this.li=Response;
       this.lis = this.li.datetime
-      
+        // Substring some letters from datetime data and print into HTML
         let str = this.li.datetime
         let firstCut = str.substr(11, str.length);
         let newStr = firstCut
         newStr = firstCut.substr(0, newStr.length-13)
         this.lis = newStr;
-        
+        // Remove class
         this.restartEurope()
+        // Change background according to region
         document.body.style.backgroundImage = "url('https://source.unsplash.com/1600x900/?" + region + ")"
       }});
   }
