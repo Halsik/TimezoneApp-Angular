@@ -1,0 +1,63 @@
+
+
+
+button {
+    font-size: 14px;
+    cursor: pointer;
+    margin: 20px;
+    padding: 1em 1em;
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    transition: 0.3s;
+    color: white;
+    background: #3b3b3b;
+}
+.card {
+    background: #000000d0;
+    color: white;
+    padding: 2em;
+    border-radius: 30px;
+    margin: 10px;
+    
+}
+
+
+button:hover {
+    color: white;
+    background: #da1919;
+    
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.time {
+    font-size: 9em;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.pressed {
+    transform: scale(1.1);
+    box-shadow: #da1919 0px 0px 10px 1px;
+    background: #da1919;
+}
+
+.bi-clock-fill {
+    font-size: 100px;
+   margin-left: 50px;
+    
+    
+    
+}
+
+.time-cont {
+    display: flex;
+    justify-content: center;
+}

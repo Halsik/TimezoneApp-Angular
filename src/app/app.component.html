@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="flex">
+  <button (click)="europe()" class="europe pressed">Europe/Warsaw</button>
+  <button #myLi (click)="asia()" class="asia " >Asia/Tokyo</button>
+  <button (click)="america()" class="america ">America/New York</button>
+  <button (click)="africa()" class="africa ">Africa/Cairo</button>
+  <button (click)="australia()" class="australia ">Australia/Sydney</button>
+</div>
+ <div class="time-cont">
+     <h1 class="time">{{lis}}</h1><i class="bi bi-clock-fill"></i>
+ </div>
+</div>
